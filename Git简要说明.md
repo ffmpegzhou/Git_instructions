@@ -12,7 +12,7 @@ Git用于版本控制：
 
 2、区分代码提交人
 
-![2022-12-21_161458.jpg](C:\Users\Cpp_Zhou\Desktop\C++学习笔记（Markdown格式）\源图片\2022-12-21_161458.jpg)
+![2022-12-21_161458.jpg](D:\Gitinstruc\pics\2022-12-21_161458.jpg)
 
 ### git常用操作
 
@@ -48,50 +48,7 @@ clean up；（清理）：删除某些文件，如未受版本控制文件、忽
 add：（添加）：可以把未受版本控制文件加入本地仓库
 ```
 
-操作过程记录
 
-1、从gitee克隆到本地
-
-<img src="file:///C:/Users/Cpp_Zhou/Desktop/C++学习笔记（Markdown格式）/源图片/2022-12-21_121627.jpg" title="" alt="2022-12-21_121627.jpg" width="609">
-
-2、发现ssh不能用，<mark>改到http地址</mark>
-
-<img src="file:///C:/Users/Cpp_Zhou/Desktop/C++学习笔记（Markdown格式）/源图片/2022-12-21_121646.jpg" title="" alt="2022-12-21_121646.jpg" width="526">
-
-3、克隆成功
-
-<img src="file:///C:/Users/Cpp_Zhou/Desktop/C++学习笔记（Markdown格式）/源图片/2022-12-21_150900.jpg" title="" alt="2022-12-21_150900.jpg" width="537">
-
-4、修改后频繁报错。
-
-该报错在git push时出现，
-
-> 就是在本地仓库上的修改没有基于远程库最新版本，你的本地仓库版本落后于远程仓库。（这个报错告诉我们在本地开发的时候，要经常使用git pull获取远程分支最新改动，这样才能保证在最终git push的时候本地commit历史和远程commit历史是一致的）
-
-> 场景一：
-> 起初本地仓库和远程仓库是同步的，某一天在远程仓库上直接做了修改，此时远程和本地就不同步了。过了几天你在本地仓库做了一些修改，修改完成后使用git push想要提交，此时就会报错。
-
-```c
-!rejected]master -> master (non-fast-forwarderror: failed to push some refs to
- "https://gitee.com/ffmpegzhou/romote-control,githint: Updates were rejected 
-because the tip of your current branch is behindhint: its remote counterpart.
- Integrate the remote changes (e.g.hint:'git pull ...) before pushing 
-again.hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-```
-
-<img src="file:///C:/Users/Cpp_Zhou/Desktop/C++学习笔记（Markdown格式）/源图片/2022-12-21_155228.jpg" title="" alt="2022-12-21_155228.jpg" width="581">
-
-<img src="file:///C:/Users/Cpp_Zhou/Desktop/C++学习笔记（Markdown格式）/源图片/2022-12-21_155358.jpg" title="" alt="2022-12-21_155358.jpg" width="559">
-
-5、已解决问题
-
-<img title="" src="file:///C:/Users/Cpp_Zhou/Desktop/C++学习笔记（Markdown格式）/源图片/2022-12-21_163214.jpg" alt="2022-12-21_163214.jpg" width="547">
-
-解决方法1、先pull最新代码再修改即可
-//在修改本地代码前，**先使用git pull拉取远程最新代码，然后再进行修改**（推荐--rebase）
-`git pull 远程仓库名 远程分支名 --rebase`
-解决方法2、git push --force。在确认代码无误的情况下，直接使用--force强制推送（不推荐
-`git push 远程仓库名 远程分支名 --force`
 
 ### 创建、修改分支
 
@@ -100,21 +57,3 @@ again.hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 任何参与开发的人，只要不是一次性修改，都应该开一个分支，把自己的工作先合入这个分支；等开发完全完成后再合并自己的分支到主版本。
 
 添加环境变量后，用powershell直接可以以命令行形式创建分支。
-
-powershell常用命令
-
-```cpp
-git init -b "name": 指定并创建当前目录
-git branch -a :显示所有分支
-git branch "name": 创建分支
-git checkout -b "name": 创建并立即切换到指定分支
-git checkout  "name": 切换到指定分支
-git merge :合并分支
-git add . : 提交修改
-git stash: 暂存
-git branch -m "oldname" "newname":修改分支名
-git merge "name":把指定分支合并到主分支
-git commit -m 'text':将本地暂存的修改提交到版本库,并加注释
-```
-
-## 
