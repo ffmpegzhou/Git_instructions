@@ -6,7 +6,7 @@
 
 添加环境变量后，用powershell直接可以以命令行形式创建分支。
 
-powershell-git常用命令
+powershell-git常用命令：
 
 配置http代理
 
