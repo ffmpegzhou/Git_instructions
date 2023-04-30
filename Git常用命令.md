@@ -89,8 +89,6 @@ git pull --force
 gir push --force
 ```
 
-
-
 ### 查看、切换分支
 
 查看所有分支
