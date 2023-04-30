@@ -29,15 +29,15 @@ git commit -m 'text':将本地暂存的修改提交到版本库,并加注释
 ### 配置http代理
 
 ```cpp
-例如clash的端口号为7890，那么要新增一下，否则无法推送。
+例如clash的端口号为7890，那么要新增一下，否则无法在命令行模式推送。
 git config --global http.proxy 127.0.0.1:7890   
 ```
 
-### 新建本地文件夹并同步到远端
+### 新建本地仓库文件夹并同步到远端
 
 在需要添加为仓库的本地文件夹里打开powershell输入命令.
 
-初始化git仓库,并把文件加入暂存区,暂时提交。
+初始化git仓库,并把文件加入暂存区, 暂时提交。
 
 ```cpp
 git init
@@ -48,7 +48,7 @@ git commit -m"text"
 接着把本地仓库连接远程地址
 
 ```c
- git remote add origin[url]
+ git remote add origin [url]
 ```
 
 推送
@@ -57,9 +57,9 @@ git commit -m"text"
 git push
 ```
 
-### 首次从远端拉取到本地文件夹
+### 首次从远端克隆到本地文件夹
 
-在其他电脑上新建了文件并推送到远端，去公司电脑上需要从远端拉取，再修改。
+在其他电脑上新建了仓库推送到了远端，去公司电脑上需要从远端拉取。
 
 新建一个文件夹，并在此处创建git版本库。输入url地址克隆到本地。
 
@@ -70,13 +70,26 @@ git clone [url]
 
 ### 远端修改后合入本地
 
-在远端上传了修改后的文件，回到本地需要拉取最新修改到本地，再进行修改，否则会冲突。
+在远端上传了修改后的文件，回到其他设备需要拉取最新修改到本地，再进行修改，否则会冲突。
+
+此处注意pull和fetch的区别。日常用fetch更安全。
 
 git pull=git fetch+pull
 
 ```cpp
-git fetch [url]
+git fetch origin [branch_name]
 ```
+
+### 强制推送/拉取
+
+不管有无冲突，加上--force参数都可以强制推送和拉取（慎用）
+
+```cpp
+git pull --force
+gir push --force
+```
+
+
 
 ### 查看、切换分支
 
@@ -89,5 +102,11 @@ git branch -a
 切换到指定分支
 
 ```cpp
-git checkout[branchname]
+git checkout [branch_name]
+```
+
+### 查看所有历史版本
+
+```c
+git reflog 
 ```
