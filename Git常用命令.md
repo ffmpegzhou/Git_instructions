@@ -6,7 +6,9 @@
 
 添加环境变量后，用powershell直接可以以命令行形式创建分支。
 
-powershell-git常用命令：
+虽然GUI比较快，但个人认为前期应多用命令行，熟悉基本原理。
+
+powershell-git常用命令行：
 
 ```cpp
 git init -b "name": 指定新的分支
@@ -55,14 +57,25 @@ git commit -m"text"
 git push
 ```
 
-### 从远端拉取到本地文件夹
+### 首次从远端拉取到本地文件夹
 
-在家中的电脑上新建了文件并推送，去公司电脑上需要从远端拉取再修改。
+在其他电脑上新建了文件并推送到远端，去公司电脑上需要从远端拉取，再修改。
 
-新建一个文件夹并在此处创建git版本库。powershell命令行输入以下地址克隆到本地
+新建一个文件夹，并在此处创建git版本库。输入url地址克隆到本地。
 
 ```cpp
-git clone origin[url]
+git init
+git clone [url]
+```
+
+### 远端修改后合入本地
+
+在远端上传了修改后的文件，回到本地需要拉取最新修改到本地，再进行修改，否则会冲突。
+
+git pull=git fetch+pull
+
+```cpp
+git fetch [url]
 ```
 
 ### 查看、切换分支
