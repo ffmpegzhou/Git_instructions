@@ -6,7 +6,7 @@
 
 添加环境变量后，用powershell直接可以以命令行形式创建分支。
 
-虽然GUI比较快，但个人认为前期应多用命令行，熟悉基本原理。
+虽然GUI比较快，但个人认为前期应先多用命令行，熟悉基本原理。
 
 powershell-git常用命令行：
 
@@ -14,13 +14,13 @@ powershell-git常用命令行：
 git init -b "name": 指定新的分支
 git branch -a :显示所有分支
 git branch "name": 创建分支
-git checkout -b "name": 创建并立即切换到指定分支
+git checkout -b "name": 创建并立即切换到指定的分支
 git checkout  "name": 切换到指定分支
 git merge :合并分支
-git add . : 提交修改
+git add . : 提交修改（workspace->index）
 git stash: 暂存
 git branch -m "oldname" "newname":修改分支名
-git merge "name":把指定分支合并到主分支
+git merge "name":把指定分支合并到主分支（/refs/remotes->Respostory）
 git commit -m 'text':将本地暂存的修改提交到版本库,并加注释
 ```
 
