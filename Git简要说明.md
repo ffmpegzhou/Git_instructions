@@ -19,7 +19,7 @@ Git用于版本控制可解决以下问题：
 ![git原理图](https://github.com/ffmpegzhou/Git_instructions/blob/main/pics/2023-05-01_005848.jpg)
 基本分为工作区Workspace、暂存区index、本地仓库Repository、远程仓库Remote, 
 
-另外还有/refs/remote，在远程和本地仓库之间，是远程仓库的一个只读引用，不可修改。
+另外在远程和本地仓库之间还有/refs/remote，是远程仓库的一个只读引用，不可修改。
 ### git常用操作
 
 ```c
