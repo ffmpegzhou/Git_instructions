@@ -17,15 +17,15 @@ Git用于版本控制可解决以下问题：
 3、多人协作开发；
 
 ![git原理图](https://github.com/ffmpegzhou/Git_instructions/blob/main/pics/2023-05-01_005848.jpg)
-基本分为工作区Workspace、暂存区index、本地仓库Repository、远程仓库Remote,另外还有一个refs/remote，是只读的远程仓库的引用。
+基本分为工作区Workspace、暂存区index、本地仓库Repository、远程仓库Remote, 另外还有一个/refs/remote，是远程仓库的只读引用，不可修改。
 ### git常用操作
 
 ```c
 pull（拉取）:获取远程仓库中的代码更新，并且合并到本地仓库中(pull=fetch+merge)
 
-fetch（获取）:获取远程仓库的代码更新
+fetch（获取）:获取远程仓库的代码更新（remote->/refs/remote）
 
-merge（合并）：将获取到的远程更新合并到本地仓库
+merge（合并）：将获取到的远程更新合并到本地仓库(/refs/remote->Repository)
 
 commit:（提交）：将更新的代码提交到本地仓库
 
