@@ -17,7 +17,7 @@ Git用于版本控制可解决以下问题：
 3、多人协作开发；
 
 ![git原理图](https://github.com/ffmpegzhou/Git_instructions/blob/main/pics/2023-05-01_005848.jpg)
-基本分为工作区Workspace、暂存区index、本地仓库Repository、远程仓库Remote。
+基本分为工作区Workspace、暂存区index、本地仓库Repository、远程仓库Remote,另外还有一个refs/remote，是只读的远程仓库的引用。
 ### git常用操作
 
 ```c
