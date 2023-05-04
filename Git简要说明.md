@@ -6,13 +6,15 @@
 
 分布式版本控制系统没有中央服务器，每个人都有一个完整的版本库，通过各自的修改推送给对方，使得可以多个人协作。
 
-Git用于版本控制：
+Git用于版本控制可解决以下问题：
 
-1、辅助合并代码；
+1、辅助合并代码并灵活切换各个历史版本；
 
-2、区分代码提交人
+2、区分代码提交人、比较任意两个版本差异；
 
-![2022-12-21_161458.jpg](https://github.com/ffmpegzhou/Git_instructions/blob/main/pics/2023-05-01_005848.jpg)
+3、多人协作开发；
+
+![git原理图](https://github.com/ffmpegzhou/Git_instructions/blob/main/pics/2023-05-01_005848.jpg)
 
 ### git常用操作
 
