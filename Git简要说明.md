@@ -12,7 +12,7 @@ Git用于版本控制：
 
 2、区分代码提交人
 
-![2022-12-21_161458.jpg](D:\Gitinstruc\pics\2022-12-21_161458.jpg)
+![2022-12-21_161458.jpg](https://github.com/ffmpegzhou/Git_instructions/blob/main/pics/2023-05-01_005848.jpg)
 
 ### git常用操作
 
