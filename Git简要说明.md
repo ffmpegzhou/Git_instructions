@@ -8,6 +8,10 @@ Git是分布式版本控制系统，它就没有中央服务器的，每个人�
 
 Git是分布式版本控制。分布式版本控制系统没有中央服务器，每个人都有一个完整的版本库，通过各自的修改推送给对方，使得可以多个人协作。
 
+简洁的图形教程：[git 简明指南](https://www.runoob.com/manual/git-guide/)
+
+git的底层实现：[图解Git](https://marklodato.github.io/visual-git-guide/index-zh-cn.html#commit)
+
 git数据库其实是简单的“键值对（key-value）”数据库。向该数据库中插入任意类型的内容，它都会返回一个键值。通过返回的键值可以在任意时刻再次检索该内容。
 
 Git用于版本控制可解决以下关键问题：
