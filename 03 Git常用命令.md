@@ -8,7 +8,7 @@
 
 虽然GUI比较快捷，但前期应多用命令行，熟悉基本原理，最主要的是命令行较为安全，基本不会出现频繁误操作。
 
-powershell中git常用命令：
+git常用命令：
 
 ```cpp
 git init -b "name": 指定新的分支
@@ -24,6 +24,7 @@ git merge "name":把指定分支合并到主分支（/refs/remotes->Respostory�
 git commit -m 'text':将本地暂存的修改提交到版本库,并加注释
 git commit -a :不加注释直接暂存修改
 git log :查看历史修改
+git ls-files: 列出文件
 ```
 
 ## 常用场景
